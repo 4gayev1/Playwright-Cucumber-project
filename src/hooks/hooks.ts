@@ -22,7 +22,7 @@ BeforeAll(async function () {
 Before(async function ({ pickle }) {
   browser = await invokeBrowser(`./test-results/visualReport/${pickle.name}`);
   fixture.page = await browser.newPage();
-  featureDefiner(pickle.uri.split("/").pop().split(".")[0]);
+  featureDefiner(pickle.uri);
 });
 
 After(async function ({ pickle, result }) {
